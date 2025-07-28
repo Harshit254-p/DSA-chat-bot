@@ -23,8 +23,4 @@ A conversational web-based chatbot designed to help users understand Data Struct
 
 ---
 
-## 📦 Installation
 
-### 1. Clone the repository
-
-```bash
