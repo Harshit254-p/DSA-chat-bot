@@ -1,0 +1,205 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --chat-bg: #f2f2f2;
+  --user-msg-bg: #dcdcdc;
+  --bot-msg-bg: #e0e0e0;
+  --search-bg: #e0e0e0;
+  --btn-bg: #007bff;
+  --input-color: #000;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --chat-bg: #2c2c2c;
+  --user-msg-bg: #000101;
+  --bot-msg-bg: #444;
+  --search-bg: #3b3b3b;
+  --btn-bg: #007bff;
+  --input-color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--chat-bg);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.chat-header p {
+  color: #aaa;
+  margin: 4px 0 20px;
+}
+
+#chat-box {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+.user-message {
+  background-color: var(--user-msg-bg);
+  text-align: right;
+}
+
+.bot-message {
+  background-color: var(--bot-msg-bg);
+  text-align: left;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 45px;
+  background-color: var(--search-bg);
+  border-radius: 25px;
+  overflow: hidden;
+  transition: width 0.4s ease, background 0.3s;
+}
+
+.search.active {
+  width: 100%;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--input-color);
+  font-size: 16px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.search.active .search-bar {
+  display: block;
+  opacity: 1;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: white;
+  padding: 0 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.search-glass {
+  display: inline;
+}
+
+.search.active .search-glass {
+  display: none;
+}
+
+.search-close {
+  display: none;
+}
+
+.search.active .search-close {
+  display: inline;
+}
+
+.svg-btn {
+  background-color: var(--btn-bg);
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.search.active .svg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 20px;
+  padding: 15px 0;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DSA Instructor Chat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <!-- Theme Toggle Switch -->
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="theme-switch">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>DSA Instructor</h2>
+      <p>Typically replies instantly</p>
+    </div>
+
+    <div class="chat-box" id="chat-box">
+      <!-- Messages will appear here -->
+    </div>
+
+    <form class="search">
+      <input class="search-bar" id="user-input" type="search" name="q" placeholder="Ask your DSA question..." autocomplete="off" required />
+
+      <button type="submit" id="send-btn" class="svg-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+        </svg>
+      </button>
+
+      <button class="search-btn search-toggle-btn" type="button" aria-label="Toggle search">
+        <ion-icon class="search-icon search-glass" name="search-outline"></ion-icon>
+        <ion-icon class="search-icon search-close" name="close-outline"></ion-icon>
+      </button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Copyright 2025| Harshit Pandya</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
